@@ -1,3 +1,3 @@
 <?php
 
-echo "This is the about page";
+echo "This is the about.php page.";
