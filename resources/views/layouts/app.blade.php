@@ -8,8 +8,27 @@
     <title>Acme</title>
 </head>
 <body>
-    @yield('content')
+    @include('inc.navbar')
 
-    @include('inc.sidebar')
+    <div class="container">
+
+        @if( Request::is('/') )
+            @include('inc.showcase')
+        @endif
+
+        <div class="row">
+            <div class="col-8 col-sm-8 col-lg-8">
+                @yield('content')
+            </div>
+            <div class="col-4 col-sm-4 col-lg-4">
+                 @include('inc.sidebar')
+            </div>
+        </div>
+
+        <footer id="footer" class="text-center">
+            <p>Copyright 2019 &copy; Acme</p>
+        </footer>
+    </div>
+
 </body>
 </html>
