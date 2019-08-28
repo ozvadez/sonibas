@@ -18,16 +18,7 @@
 
         <div class="row">
             <div class="col-8 col-sm-8 col-lg-8">
-                @if( count($errors) > 0 )
-
-                    @foreach( $errors->all() as $error )
-                        <div class="alert alert-danger">
-                            {{ $error }}
-                        </div>
-                    @endforeach
-
-                @endif
-
+                @include('inc.messages')
                 @yield('content')
             </div>
             <div class="col-4 col-sm-4 col-lg-4">
